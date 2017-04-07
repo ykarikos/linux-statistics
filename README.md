@@ -23,6 +23,10 @@ $ cd ~/linux-statistics
 $ gnuplot linux-statistics.gnuplot
 ```
 
+## Output
+
+![Linux Statistiscs](linux-statistics.png)
+
 ## License 
 
 Copyright © 2017 Yrjö Kari-Koskinen ykk@peruna.fi
