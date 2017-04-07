@@ -5,6 +5,15 @@ set style data lines
 set y2tics
 set grid x y
 set border
-plot 'linux-statistics.txt' using 2:xticlabels(1) t 'size (M)', \
-     'linux-statistics.txt' using 3:xticlabels(1) t 'number of files' axes x1y2
+
+set xdata time
+set format x "%Y-%m"
+set timefmt "%Y-%m-%d"
+set xtics "2005-06", 31536000
+
+set ylabel "MB"
+set y2label "number of files"
+
+plot 'linux-statistics.txt' using 1:3 t 'size', \
+     'linux-statistics.txt' using 1:4 t 'files' axes x1y2
 
