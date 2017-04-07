@@ -7,6 +7,7 @@ for tag in $TAGS; do
     date=`git log -1 --pretty=%ad --date=short`
     numfiles=`find * -type f|wc -l`
     treesize=`du -scm *|tail -1|cut -f1`
-    echo $date $tag $treesize $numfiles
+    loc=`find . -name "*.c" -or -name "*.h"|xargs cat|wc -l`
+    echo $date $tag $treesize $loc $numfiles
 done
 
